@@ -2,7 +2,6 @@
 using System.Xml.Linq;
 using Domain.Models;
 using Newtonsoft.Json;
-using WebClient.Models;
 
 namespace Domain
 {
