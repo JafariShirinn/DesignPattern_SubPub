@@ -5,6 +5,6 @@ namespace Domain.Services
 {
     public interface IWeatherForecastService
     {
-        Task<string> BroadcastAsync(WeatherForecastModel forecastModel);
+        string Broadcast(WeatherForecastModel forecastModel);
     }
 }

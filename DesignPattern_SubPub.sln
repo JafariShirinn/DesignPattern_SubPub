@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "WebClient\WebClient.csproj", "{0EF02F07-D17E-4EB3-9761-40F72B7280BF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppTest", "AppTest\AppTest.csproj", "{A310D9EA-D544-4620-A3E7-9978603E0ABF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainTest", "DomainTest\DomainTest.csproj", "{EE7E6573-BF12-4EE9-9A5C-580462C99B2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{0EF02F07-D17E-4EB3-9761-40F72B7280BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EF02F07-D17E-4EB3-9761-40F72B7280BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EF02F07-D17E-4EB3-9761-40F72B7280BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A310D9EA-D544-4620-A3E7-9978603E0ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A310D9EA-D544-4620-A3E7-9978603E0ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A310D9EA-D544-4620-A3E7-9978603E0ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A310D9EA-D544-4620-A3E7-9978603E0ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7E6573-BF12-4EE9-9A5C-580462C99B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7E6573-BF12-4EE9-9A5C-580462C99B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7E6573-BF12-4EE9-9A5C-580462C99B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7E6573-BF12-4EE9-9A5C-580462C99B2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

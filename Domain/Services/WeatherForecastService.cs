@@ -13,7 +13,7 @@ namespace Domain.Services
         {
             _broadcasting = broadcasting;
         }
-        public async Task<string> BroadcastAsync(WeatherForecastModel forecastModel)
+        public string Broadcast(WeatherForecastModel forecastModel)
         {
             if (forecastModel == null)
                 throw new NullReferenceException(nameof(forecastModel));
@@ -22,7 +22,7 @@ namespace Domain.Services
 
             var xmlHelper = new XmlHelper();
 
-            return await xmlHelper.ReadForecastAsync();
+            return xmlHelper.ReadForecast();
         }
     }
 }

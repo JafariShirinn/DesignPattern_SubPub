@@ -37,13 +37,13 @@ namespace App.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Broadcast(WeatherForecastRequestModel forecastRequestModel)
+        public IActionResult Broadcast(WeatherForecastRequestModel forecastRequestModel)
         {
             try
             {
                 var weatherForecastModel = _mapper.Map(forecastRequestModel);
 
-                var result = await _weatherForecastService.BroadcastAsync(weatherForecastModel);
+                var result =  _weatherForecastService.Broadcast(weatherForecastModel);
 
                 return Ok(result);
             }
