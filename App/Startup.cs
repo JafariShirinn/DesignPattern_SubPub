@@ -1,18 +1,18 @@
+using App.Mappers;
+using Domain.Mappers;
+using Domain.Media;
+using Domain.Models;
+using Domain.Publisher;
+using Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using WebClient.Models;
 
-namespace DesignPattern_SubPub
+namespace App
 {
     public class Startup
     {
@@ -27,10 +27,17 @@ namespace DesignPattern_SubPub
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+            services.AddScoped<INewspaper, Newspaper>();
+            services.AddScoped<ISocialMedia, SocialMedia>();
+            services.AddScoped<IRadioStation, RadioStation>();
+            services.AddScoped<IBroadcasting, Broadcasting>();
+            services.AddScoped<IMapper<WeatherForecastRequestModel, WeatherForecastModel>, WeatherForecastRequestToWeatherForecastMapper>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DesignPattern_SubPub", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "VismaAssignmentAPI1", Version = "v1" });
             });
         }
 
