@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Domain.Mappers;
 using Domain.Media;
 using Domain.Models;
@@ -11,7 +10,7 @@ using WebClient.Models;
 namespace App.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private readonly ISocialMedia _socialMedia;

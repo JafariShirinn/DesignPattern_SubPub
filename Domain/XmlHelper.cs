@@ -9,7 +9,7 @@ namespace Domain
 {
     public class XmlHelper
     {
-        private readonly string _xmlPath = $"{System.AppDomain.CurrentDomain.BaseDirectory}File\\ForecastResults.xml";
+        private readonly string _xmlPath = $"{System.AppDomain.CurrentDomain.BaseDirectory}\\ForecastResults.xml";
 
         public void UpdateForecast(string media, WeatherForecastModel weatherForecastModel)
         {
