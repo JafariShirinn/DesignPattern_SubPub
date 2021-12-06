@@ -1,3 +1,4 @@
+using System.IO;
 using App.Mappers;
 using Domain.Mappers;
 using Domain.Media;
@@ -14,16 +15,30 @@ using WebClient.Models;
 
 namespace App
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Startup Constructor
+        /// </summary>
+        /// <param name="configuration">Interface of Configuration</param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// Configuration
+        /// </summary>
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container. 
+        /// </summary>
+        /// <param name="services">services to add to the container</param>
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -37,11 +52,20 @@ namespace App
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "VismaAssignmentAPI1", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "DesignPatternSubPub", Version = "v1",
+                    Description = "This is a pub/sub example.",
+                });
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app">application builder</param>
+        /// <param name="env">web host environment</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -62,5 +86,7 @@ namespace App
                 endpoints.MapControllers();
             });
         }
+
     }
 }
+

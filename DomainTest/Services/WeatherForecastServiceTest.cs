@@ -5,7 +5,6 @@ using FizzWare.NBuilder;
 using Moq;
 using NUnit.Framework;
 using System;
-using System.Threading.Tasks;
 using FluentAssertions;
 
 namespace DomainTest.Services

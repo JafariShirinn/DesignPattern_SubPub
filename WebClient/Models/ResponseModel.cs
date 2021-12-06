@@ -1,6 +1,4 @@
-﻿using System.Net.Mime;
-
-namespace WebClient.Models
+﻿namespace WebClient.Models
 {
     public class ResponseModel
     {

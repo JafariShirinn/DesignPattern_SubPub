@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Domain.Models;
 using Domain.Publisher;
 
 namespace Domain.Services
 {
-    public class WeatherForecastService: IWeatherForecastService
+    public class WeatherForecastService : IWeatherForecastService
     {
         private readonly IBroadcasting _broadcasting;
 
