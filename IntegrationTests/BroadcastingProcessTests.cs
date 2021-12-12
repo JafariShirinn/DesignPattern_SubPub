@@ -15,7 +15,6 @@ namespace IntegrationTests
     [Explicit]
     public class BroadcastingProcessTests
     {
-        private TestFixture _testsFixture;
         private WebApplicationFactory<Startup> _appFactory;
         private IServiceScope _serviceScope;
         private HttpClient _httpClient;
@@ -26,7 +25,6 @@ namespace IntegrationTests
         {
             _appFactory = new WebApplicationFactory<Startup>();
             _serviceScope = _appFactory.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            _testsFixture = new TestFixture();
             _httpClient = _appFactory.CreateClient();
             _forecastClient = new ForecastClient(_httpClient);
         }
@@ -37,7 +35,6 @@ namespace IntegrationTests
             _appFactory.Dispose();
             _serviceScope.Dispose();
             _httpClient.Dispose();
-            _testsFixture.Dispose();
         }
 
         [Test]
